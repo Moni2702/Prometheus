@@ -47,5 +47,10 @@ kubectl port-forward -n monitoring svc/monitoring-kube-prometheus-alertmanager 9
 #### Create cpu stress
 kubectl delete pod cpu-test; kubectl run cpu-test --image=containerstack/cpustress -- --cpu 4 --timeout 60s --metrics-brief
 
-#### Create unhealthy Pod
-kubectl apply -f email-service-alert-test.yaml
+
+### Deploy Redis Exporter
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add stable https://charts.helm.sh/stable
+helm repo update
+
+helm install redis-exporter prometheus-community/prometheus-redis-exporter -f redis-values.yaml
