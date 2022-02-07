@@ -4,8 +4,8 @@ kubectl create namespace online-shop
 kubectly apply -f ~/Demo-projects/Bootcamp/monitoring/config-microservices.yaml -n online-shop
 
 # OPTIONAL for Linode
-chmod 400 ~/Downloads/online-shop-kubeconfig.yaml
-export KUBECONFIG=~/Downloads/online-shop-kubeconfig.yaml
+"chmod 400 ~/Downloads/online-shop-kubeconfig.yaml"
+"export KUBECONFIG=~/Downloads/online-shop-kubeconfig.yaml"
 
 
 ### Deploy Prometheus Operator Stack
