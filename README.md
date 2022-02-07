@@ -18,7 +18,6 @@
 [Link to the chart: https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack]
 
 ### Check Prometheus Stack Pods
-    kubectl 
     kubectl get all -n monitoring
 
 ### Access Prometheus UI
